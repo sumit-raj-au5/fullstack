@@ -1,0 +1,14 @@
+-> react-quill is used for rick text editor
+-> new components together make a page and that page need to be added in router in App.js
+-> That route should be linked somewhere using <Link to={'/route'}> Click to go <Link/> so that after clicking on link it can be redirected to linked page
+
+/* Firebase */
+-> Go to firebase console
+-> Add a new project
+-> Do basic confirgurations
+-> Add Sign-in methods
+-> Add authorized domain
+-> Add a firebase web app to get confirguration ID
+
+/*User state management */
+-> We are using redux for user state management
