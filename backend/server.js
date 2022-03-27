@@ -4,9 +4,10 @@ const bodyParser = require('body-parser')
 const path = require('path')
 const app = express();
 const db = require("./db")
+require("dotenv").config();
 const PORT = process.env.PORT || 80;
 const router = require('./routers')
-
+console.log(PORT)
 //db connections
 //using .connect defined in db.js to connect with database
 db.connect()

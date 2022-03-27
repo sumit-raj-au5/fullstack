@@ -27,7 +27,7 @@ function MainQuestion() {
 
     useEffect(() => {
          async function loadQuestionData(){
-            await axios.get(`/api/question/${id}`)
+            await axios.get(`https://stackoverflow-clone-guvi.herokuapp.com/api/question/${id}`)
             .then((res)=>{
                 console.log(res.data[0])
                 setQuestionData(res.data[0])
@@ -44,7 +44,7 @@ function MainQuestion() {
 
     const getUpdatedAnswers = async() =>{
         
-            await axios.get(`/api/question/${id}`)
+            await axios.get(`https://stackoverflow-clone-guvi.herokuapp.com/api/question/${id}`)
             .then((res)=>{
                 console.log(res.data[0])
                 setQuestionData(res.data[0])
@@ -67,7 +67,7 @@ function MainQuestion() {
             "Content-Type": "application/json"
         }
     }
-    await axios.post('/api/answer', body, config).then((res)=>{
+    await axios.post('https://stackoverflow-clone-guvi.herokuapp.com/api/answer', body, config).then((res)=>{
         console.log(res.data);
         alert('Answer added successfully')
         setAnswer('');
@@ -82,7 +82,7 @@ function MainQuestion() {
                 comment:comment,
                 user:user
             }
-            await axios.post(`/api/comment/${id}`, body).then((res)=>{
+            await axios.post(`https://stackoverflow-clone-guvi.herokuapp.com/api/comment/${id}`, body).then((res)=>{
                 console.log(res.data)
                 setComment("")
                 setShow(false)

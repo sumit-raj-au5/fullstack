@@ -10,7 +10,7 @@ function Index() {
   useEffect(()=>{
     async function getQuestion(){
       await axios
-      .get('/api/question')
+      .get('https://stackoverflow-clone-guvi.herokuapp.com/api/question')
       .then((res)=>{
         console.log(res.data)
         //setting data in reverse so latest question appears on top

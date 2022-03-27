@@ -32,7 +32,7 @@ function Question() {
                 tag: JSON.stringify(tags),
                 user:user
             }
-            await axios.post('/api/question', bodyJSON).then((res)=>{
+            await axios.post('https://stackoverflow-clone-guvi.herokuapp.com/api/question', bodyJSON).then((res)=>{
                 alert('Question added successfully');
                 setLoading(false);
                 history.push('/')
